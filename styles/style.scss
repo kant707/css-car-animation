@@ -76,6 +76,7 @@
 .car {
   display: block;
   width: 400px;
+  padding: 0 15px;
   position: absolute;
   left: 50%;
   bottom: 100px;
@@ -105,14 +106,13 @@
   width: 400px;
   position: absolute;
   left: 50%;
-  bottom: 100px;
+  bottom: 76px;
   transform: translateX(-50%);
   z-index: 2;
 
   img {
-    width: 70px;
+    width: 66px;
     position: absolute;
-    bottom: 11px;
     animation: wheel 1s linear infinite;
   }
   @keyframes wheel {
@@ -121,9 +121,9 @@
     }
   }
   .back-wheel {
-    left: 36px;
+    left: 48px;
   }
   .front-wheel {
-    right: 49px;
+    right: 60px;
   }
 }
