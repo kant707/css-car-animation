@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  &:before {
+    box-sizing: inherit;
+  }
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: url('../images/sky.jpg') center/cover;
+  position: relative;
+  overflow-x: hidden;
+  text-align: center;
+}
+.main-heading {
+  font-weight: normal;
+  position: relative;
+  top: 100px;
+  z-index: 3;
+  text-align: center;
+
+
+  span {
+    display: inline-block;
+    font-size: 18px;
+    padding: 8px 24px;
+    background: #fff;
+    border: 1px solid #474747;
+    border-radius: 4px;
+    color: #474747;
+  }
+}
+.highway {
+  background: url('../images/road.jpg') repeat-x;
+  display: block;
+  height: 200px;
+  width: 500%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  animation: highway linear 5s infinite;
+}
+@keyframes highway {
+  100% {
+    transform: translateX(-3400px);
+  }
+}
+
+.city {
+  background: url('../images/city.png') repeat-x;
+  display: block;
+  height: 250px;
+  width: 500%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 200px;
+  z-index: 2;
+  animation: city linear 20s infinite;
+
+}
+
+@keyframes city {
+  100% {
+    transform: translateX(-1400px);
+  }
+}
+
+.car {
+  display: block;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  img {
+    max-width: 100%;
+    animation: car 1s linear infinite;
+  }
+
+  @keyframes car {
+    100% {
+      transform: translateY(-1px);
+    }
+    50% {
+      transform: translateY(1px);
+    }
+    0% {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.wheels {
+  display: block;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  img {
+    width: 70px;
+    position: absolute;
+    bottom: 11px;
+    animation: wheel 1s linear infinite;
+  }
+  @keyframes wheel {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .back-wheel {
+    left: 36px;
+  }
+  .front-wheel {
+    right: 49px;
+  }
+}
